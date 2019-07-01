@@ -1,15 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+const articles = require("./articles.json");
 
-const ArticleList = () => (
-    <div class="article-list">
-        <h2>articles</h2>
-        <Link to={"/20190701"}>
-            <h3>binary opposite states: monday, july 1, 2019</h3>
+
+
+const ArticleList = () => {
+    /*
+    const article_jsx = Object.keys(articles).map((x) => {
+        <Link to={"/" + articles[x].key}>
+            <h3>{x.title + ": " + x.date}</h3>
         </Link>
-        
+    });
+    */
+
+    const article_jsx = Object.keys(articles).map((x) => <Link to={"/"+articles[x].key}><h3>{articles[x].title}</h3></Link>);
+    return (
+    <div className="article-list">
+        <h2>articles</h2>
+        {article_jsx}
     </div>
-)
+    )}
 
 
 export default ArticleList;

@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather:900&display=swap');
 #header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding-top: 25px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 }
 
 h1 {
@@ -16,4 +20,17 @@ h2 {
     padding: 10px 0 0 0;
     font-size: 1em;
     font-family: 'Merriweather', 'Serif';
+}
+
+#social-links {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 50px;
+    padding-bottom: 0;
+}
+
+.fab {
+    font-size: 3em;
 }
