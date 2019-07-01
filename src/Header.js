@@ -7,6 +7,7 @@ const Header = () => {
             <h1>the</h1>
             <h1>universe is a</h1>
             <h1>simulation</h1>
+            {/* TODO: Add links to Instagram and Youtube */}
         </div>
     )
 }
