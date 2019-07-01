@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+a {
+  color: darkred;
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(255, 231, 185);
+}
+
+

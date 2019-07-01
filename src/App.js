@@ -1,20 +1,22 @@
 import React from 'react';
 import Header from './Header';
-import Introduction from './Introduction';
-import ArticleList from './ArticleList';
+import LandingPage from './LandingPage';
 import Footer from './Footer';
-
+import Article from './Article';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 
-const App = () => {
-  return (
-    <div className="App">
-      <Header />
-      <Introduction />
-      <ArticleList />
-      <Footer />
-    </div>
-  )
-}
+const App = () => (
+    <Router>
+      <div className="App">
+        <Header />
+
+        <Route exact path={"/"} component={LandingPage} />
+        <Route exact path={"/:date"} component={Article} />
+
+        <Footer />
+      </div>
+    </Router>
+)
 
 export default App;
